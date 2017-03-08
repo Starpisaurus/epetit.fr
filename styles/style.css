@@ -157,6 +157,7 @@ h1 {
     font-weight: 100;
 }
 
+
 .overlay {
     height: 100%;
     width: 100%;
@@ -198,9 +199,18 @@ h1 {
         font-size: 25px;
     }
     h1 {
-        font-size: 65px
+        font-size: 65px;
     }
     .description {
         font-size: 16px;
+    }
+    .content{
+            position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, 0%);
+    width: 100%;
+    text-align: center;
+    padding:20px 0;
     }
 }
