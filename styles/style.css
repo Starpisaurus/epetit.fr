@@ -18,8 +18,30 @@
 }
 
 @font-face {
-    font-family: "perso";
+    font-family: "MonoSocial";
     src: url(../fonts/MonoSocialIconsFont-1.10.ttf) format('truetype');
+}
+
+@-webkit-keyframes sk-scaleout {
+    0% {
+        -webkit-transform: scale(0)
+    }
+    100% {
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+    }
+}
+
+@keyframes sk-scaleout {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+        opacity: 0;
+    }
 }
 
 * {
@@ -38,6 +60,17 @@
     -os-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
+    -ms-font-feature-settings:"liga" 1;
+    -webkit-text-rendering:optimizeLegibility;
+    -moz-text-rendering:optimizeLegibility;
+    -ms-text-rendering:optimizeLegibility;
+    -o-text-rendering:optimizeLegibility;
+    text-rendering:optimizeLegibility;
+    -webkit-font-smoothing:antialiased;
+    -moz-font-smoothing:antialiased;
+    -ms-font-smoothing:antialiased;
+    -o-font-smoothing:antialiased;
+    font-smoothing:antialiased;
 }
 
 html,
@@ -48,13 +81,13 @@ body {
 
 .name,
 .job,
-.description, 
+.description,
 li {
     text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.50);
 }
 
 body {
-    background-color:#888;
+    background-color: #888;
 }
 
 ul {
@@ -62,37 +95,17 @@ ul {
     margin-top: -20px;
 }
 
-
-
 li {
     display: inline-block;
-    font-family: 'perso', sans-serif !important;
+    font-family: 'MonoSocial', sans-serif !important;
     padding: 0px 30px 0px 30px;
     font-size: 80px;
-    
-}
-
-@media screen and (min-width: 200px) and (max-width: 769px) {
-  li{
-    display:block;
-    width:100%;
-	padding:0;
-	margin:0;
-  }
-  .job{
-	  font-size:25px;
-  }
-  h1{
-	  font-size:65px
-  }
-  
 }
 
 li > a {
     text-decoration: none;
-    font-family: 'perso', sans-serif !important;
+    font-family: 'MonoSocial', sans-serif !important;
     color: white;
-    
 }
 
 li > a:hover {
@@ -110,11 +123,11 @@ li > a:hover {
     text-align: center;
 }
 
-.stopfade { 
-   opacity: 0.3;
+.stopfade {
+    opacity: 0.3;
 }
 
-video { 
+video {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -124,9 +137,9 @@ video {
     height: auto;
     z-index: -100;
     transform: translateX(-50%) translateY(-50%);
-	background: url('../media/image/poster.png') no-repeat;
-	background-size: cover;
-	transition: 2s opacity;
+    background: url('../media/image/poster.png') no-repeat;
+    background-size: cover;
+    transition: 2s opacity;
 }
 
 .job {
@@ -140,7 +153,7 @@ video {
     font-size: 20px;
     margin-top: 40px;
     font-weight: 100;
-	margin-top:0;
+    margin-top: 0;
     letter-spacing: 3px;
 }
 
@@ -155,6 +168,7 @@ h1 {
     font-weight: 100;
 }
 
+
 .overlay {
     height: 100%;
     width: 100%;
@@ -165,7 +179,7 @@ h1 {
     background-color: #314571;
     z-index: 999;
     position: absolute;
-    top: 0; 
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -175,29 +189,53 @@ h1 {
     width: 100%;
     height: 100%;
 }
-@-webkit-keyframes sk-scaleout {
-  0% { -webkit-transform: scale(0) }
-  100% {
-    -webkit-transform: scale(1.0);
-    opacity: 0;
-  }
-}
 
-@keyframes sk-scaleout {
-  0% { 
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  } 100% {
-    -webkit-transform: scale(1.0);
-    transform: scale(1.0);
-    opacity: 0;
-  }
-}
-.button{
-    margin-top:20px;
+.button {
+    margin-top: 20px;
     padding: 5px 8px;
     border: 3px solid #FFF;
     border-radius: 10px;
     font-size: 20px;
     background: transparent;
+}
+
+@media screen and (min-width: 200px) and (max-width: 769px) {
+    li {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .job {
+        font-size: 25px;
+    }
+    h1 {
+        font-size: 65px;
+    }
+    .description {
+        font-size: 16px;
+    }
+    .content{
+            position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, 0%);
+    width: 100%;
+    text-align: center;
+    padding:20px 0;
+    }
+}
+
+@media screen and (min-aspect-ratio: 16/9) {
+	video{
+		width:100%;
+		height: auto;
+	}
+}
+
+@media screen and (max-aspect-ratio: 16/9) {
+	video{
+		width: auto;
+		height: 100%;
+	}
 }
