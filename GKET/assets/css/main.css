@@ -183,7 +183,7 @@
 		content: '';
 		display: block;
 		clear: both;
-		height: 0;
+		height: 5em;
 	}
 
 	.row.uniform > * > :first-child {
@@ -1172,6 +1172,10 @@
 		margin-bottom: 2em;
 	}
 
+h3 {
+    padding-top:0.5em;
+}
+
 /* Form */
 
 	form label {
@@ -1278,7 +1282,7 @@
 
 	section, article {
 		margin-bottom: 3em;
-        padding: 5em 0 5em 0;
+        padding: 5em 0 9em 0;
 	}
 
 	section > :last-child,
@@ -1411,11 +1415,11 @@
 
 	ul.default {
 		list-style: disc;
-		padding-left: 1em;
+		d-left: 1em;
 	}
 
 		ul.default li {
-			padding-left: 0.5em;
+			d-left: 0.5em;
 		}
 
 	ul.social {
@@ -1607,6 +1611,7 @@
 
 		.wrapper.first {
 			box-shadow: none;
+            padding-top:4em;
 		}
 
 		.wrapper.style1 {
@@ -1693,6 +1698,41 @@
 				border-right: solid 0.75em transparent;
 				border-top: solid 0.6em #282828;
 			}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #282828;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+#recomA {
+    padding: 0; !important
+    margin:0; !important
+}
+.dropdown {
+    padding: 0.2em 1em 0.2em 1em;
+margin: 0.6em 0.2em 0.6em 0.2em;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
 /* Articles */
 
@@ -1813,7 +1853,7 @@
 
 				.box.style1 {
 					padding: 3em 1em 3.5em 1em;
-                    height: 330px;
+                    height: 380px;
 				}
 
 					.box.style1 h3 {
@@ -1838,10 +1878,6 @@
 				text-align: center;
 			}
 
-				.wrapper.first {
-					padding-top: 12em;
-				}
-
 		/* Nav */
 
 			#nav a {
@@ -1855,6 +1891,11 @@
 				border-radius: 8px;
 				color: #fff;
 			}
+		
+		#recomA {
+			padding:0;
+			margin:0;
+		}
 
 				#nav a:hover {
 					background: #383838;
@@ -1937,10 +1978,6 @@
         .wrapper {
 				text-align: center;
 			}
-
-				.wrapper.first {
-					padding-top: 9em;
-				}
 
 				.wrapper.style4 .row-special {
 					margin: 2em 0 0 0;
@@ -2078,10 +2115,6 @@
 				padding: 3em 15px 3em 15px;
 				text-align: center;
 			}
-
-				.wrapper.first {
-					padding-top: 5em;
-				}
 
 		/* Nav */
 
