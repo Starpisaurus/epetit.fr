@@ -2015,6 +2015,10 @@ margin: 0.6em 0.2em 0.6em 0.2em;
 				font-size: 2.25em;
 				line-height: 1.25em;
 			}
+        
+        h3 {
+            padding-top: 2.5em;
+        }
 
 			header {
 				margin: 0 0 2em 0;
@@ -2040,6 +2044,7 @@ margin: 0.6em 0.2em 0.6em 0.2em;
 
 			section, article {
 				clear: both;
+                padding:5em 0 0 0;
 			}
 
 		/* Button */
