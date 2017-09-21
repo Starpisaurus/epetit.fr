@@ -28,7 +28,7 @@ function GetJsonFromXML(inputId) {
     var input = $('#' + inputId)[0];
     if (input != null && input.files != null) {
         var file = input.files[0];
-        if (file != null && file.name.contains(".xml")) {
+        if (file != null && file.name.indexOf(".xml") != -1 ) {
             var fileReader = new FileReader();
             var xmlDoc;
             fileReader.onloadend = function() {
