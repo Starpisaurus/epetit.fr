@@ -21,7 +21,7 @@ function GenerateIcal(json)
 
 function ParseDate(dateString){
     var date = dateString.replace(" ","T");
-    date += "+02";
+    date += "+0200";
     return new Date(date);
 }
 
