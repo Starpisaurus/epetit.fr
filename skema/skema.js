@@ -15,12 +15,13 @@ function GenerateIcal(json)
             
             calendar.addEvent(current.text,"",current.location,startDate,endDate);           
     }
-    calendar.download('Test');
+    calendar.download('calendar.ics');
     //console.log(json.data.event[0]);
 }
 
 function ParseDate(dateString){
     var date = dateString.replace(" ","T");
+    date += "+02";
     return new Date(date);
 }
 
