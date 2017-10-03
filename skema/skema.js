@@ -41,6 +41,7 @@ function GetJsonFromXML(inputId) {
                 console.log(fileReader.readyState)
                 xmlDoc = parser.parseFromString(fileReader.result, "text/xml");
                 var json = xml2json(xmlDoc, " ");
+		json = json.replace(/&amp;/g,'&');
                 var jsonObject = $.parseJSON(json);
                 GenerateIcal(jsonObject);
             }
